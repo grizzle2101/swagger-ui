@@ -242,6 +242,12 @@
       </svg>
       <h1>Hello, {{ title() }}</h1>
       <p>Congratulations! Your app is running. 🎉</p>
+      <br />
+      <div>
+        <button matButton="filled" (click)="fetchData()">Query Data:</button>
+        <br />
+        {{ acccountData() | json }}
+      </div>
     </div>
     <div class="divider" role="separator" aria-label="Divider"></div>
   </div>

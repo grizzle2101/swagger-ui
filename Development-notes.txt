@@ -1,0 +1,9 @@
+Objective:
+Demonstrate the process for coordinating between back & front-end applications.
+
+
+
+Todo:
+-Create a Model for the API
+-Demonstrate example of breaking API change.
+-Generate Model from Swagger
