@@ -15,5 +15,14 @@ export interface Account {
      */
     id?: number;
     username: string;
+    email: string;
+    /**
+     * Details for the first lodgement
+     */
+    lodgementOne: string;
+    /**
+     * Details for the second lodgement
+     */
+    lodgementTwo: string;
 }
 

@@ -246,7 +246,12 @@
       <div>
         <button matButton="filled" (click)="fetchData()">Query Data:</button>
         <br />
+        Account Data:
         {{ acccountData() | json }}
+        <br />
+        <br />
+        Sum Lodgements: ${{ acccountData().lodgementOne + acccountData().lodgementTwo | number }}
+        <br />
       </div>
     </div>
     <div class="divider" role="separator" aria-label="Divider"></div>

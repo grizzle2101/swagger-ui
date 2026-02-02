@@ -28,3 +28,12 @@ npx openapi-generator-cli generate -i http://localhost:3000/api-json -g typescri
 
 Note:
 Java is required under the hood to use the swagger gen tool.
+
+
+
+Tasks:
+Lets Manufacture a breaking change & Demonstrate how this works.
+
+1 - build a simple feature displaying the data 
+2 - change the data (break it on the backend)
+3 - regenerate swagger with new field
