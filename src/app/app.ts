@@ -21,8 +21,8 @@ export class App {
     id: 0,
     username: '',
     email: '',
-    lodgementOne: '',
-    lodgementTwo: '',
+    lodgementOne: 0,
+    lodgementTwo: 0,
   });
 
   data = {};

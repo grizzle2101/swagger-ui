@@ -19,10 +19,10 @@ export interface Account {
     /**
      * Details for the first lodgement
      */
-    lodgementOne: string;
+    lodgementOne: number;
     /**
      * Details for the second lodgement
      */
-    lodgementTwo: string;
+    lodgementTwo: number;
 }
 
