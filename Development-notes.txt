@@ -4,6 +4,27 @@ Demonstrate the process for coordinating between back & front-end applications.
 
 
 Todo:
--Create a Model for the API
--Demonstrate example of breaking API change.
 -Generate Model from Swagger
+-Demonstrate example of breaking API change.
+
+
+
+Setting up Swagger Gen:
+Step 1 - install NPM Package:
+npm install @openapitools/openapi-generator-cli -D
+
+Step 2 - Update & Run Backend:
+Ensure the API is running, and is publishing the API json.
+
+//MUST have this exposed.
+app.get("/api-json", (req, res) => {
+  res.setHeader("Content-Type", "application/json");
+  res.send(swaggerDocument);
+});
+
+Step 3 - Generate:
+npx openapi-generator-cli generate -i http://localhost:3000/api-json -g typescript-angular -o src/app/api/generated
+
+
+Note:
+Java is required under the hood to use the swagger gen tool.
