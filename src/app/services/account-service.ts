@@ -7,7 +7,7 @@ import { Account } from '../api/generated';
   providedIn: 'root',
 })
 export class AccountService {
-  readonly baseUrl = 'http://localhost:3000';
+  readonly baseUrl = 'http://localhost:8080';
 
   private http = inject(HttpClient);
 
