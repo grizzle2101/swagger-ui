@@ -16,23 +16,23 @@
     <h3>Account Details:</h3>
     <mat-form-field>
       <mat-label>Account Holder Name</mat-label>
-      <input matInput />
+      <input [formControl]="accountHolder" matInput />
     </mat-form-field>
     <mat-form-field>
       <mat-label>IBAN</mat-label>
-      <input matInput />
+      <input [formControl]="IBAN" matInput />
     </mat-form-field>
     <mat-form-field>
       <mat-label>Sort Code</mat-label>
-      <input matInput />
+      <input [formControl]="sortCode" matInput />
     </mat-form-field>
     <mat-form-field>
       <mat-label>Address</mat-label>
-      <textarea matInput></textarea>
+      <textarea [formControl]="address" matInput></textarea>
     </mat-form-field>
     <mat-form-field>
       <mat-label>Amount Owed</mat-label>
-      <input matInput />
+      <input [formControl]="amountOwed" matInput />
     </mat-form-field>
     <button matButton="filled" (click)="submit()">Submit</button>
   </div>
