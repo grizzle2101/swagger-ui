@@ -1,13 +1,16 @@
 <div class="account-details">
-  <button matButton="filled" (click)="fetchData()">Query Data:</button>
+  <button matButton="filled" (click)="fetchData()">Load Data</button>
   <br />
-  Account Details:
+
+  <!--
+    Account Details:
   {{ acccountData() | json }}
   <br />
   <br />
   Sum Lodgements: ${{ acccountData().firstLodgement + acccountData().secondLodgement | number }}
   <br />
   <br />
+  -->
 
   <div class="form-container">
     <h3>Account Details:</h3>
@@ -31,5 +34,6 @@
       <mat-label>Amount Owed</mat-label>
       <input matInput />
     </mat-form-field>
+    <button matButton="filled" (click)="submit()">Submit</button>
   </div>
 </div>

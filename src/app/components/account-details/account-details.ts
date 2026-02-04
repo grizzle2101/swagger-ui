@@ -9,7 +9,7 @@ import { MatButton } from '@angular/material/button';
 
 @Component({
   selector: 'app-account-details',
-  imports: [MatFormFieldModule, MatInputModule, MatSelectModule, JsonPipe, DecimalPipe, MatButton],
+  imports: [MatFormFieldModule, MatInputModule, MatSelectModule, MatButton],
   templateUrl: './account-details.html',
   styleUrl: './account-details.scss',
 })
@@ -27,7 +27,10 @@ export class AccountDetails {
 
   fetchData() {
     this.accountService.getAccount(12).subscribe((account) => {
+      console.log(account);
       this.acccountData.set(account);
     });
   }
+
+  submit() {}
 }
