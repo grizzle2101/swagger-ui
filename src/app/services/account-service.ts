@@ -15,7 +15,7 @@ export class AccountService {
     return this.http.get<Account>(this.baseUrl + '/accounts/' + id);
   }
 
-  postAccount() {
-    return this.http.post(this.baseUrl + '/accounts', {}, { responseType: 'text' });
+  postAccount(account: Account) {
+    return this.http.post(this.baseUrl + '/accounts', account, { responseType: 'text' });
   }
 }

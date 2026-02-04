@@ -17,6 +17,7 @@ import { FormControl, ReactiveFormsModule } from '@angular/forms';
 export class AccountDetails {
   private readonly accountService = inject(AccountService);
 
+  accountNumber: string | undefined = undefined;
   accountHolder = new FormControl();
   IBAN = new FormControl();
   sortCode = new FormControl();
@@ -28,19 +29,25 @@ export class AccountDetails {
   fetchData() {
     this.accountService.getAccount(12).subscribe((account) => {
       console.log(account);
-
-      //populate form controls w Response.
+      this.accountNumber = account.accountNumber;
       this.accountHolder.patchValue(account.ownerName);
       this.IBAN.patchValue(account.iban);
       this.sortCode.patchValue(account.sortCode);
       this.address.patchValue(account.address);
       this.amountOwed.patchValue(account.amountOwed);
     });
-
-    //update backend.
   }
 
   submit() {
-    this.accountService.postAccount().subscribe((x) => console.log('result - ', x));
+    let account: Account = {
+      accountNumber: this.accountNumber ?? undefined,
+      ownerName: this.accountHolder.value ?? undefined,
+      iban: this.IBAN.value ?? undefined,
+      sortCode: this.sortCode.value ?? undefined,
+      address: this.address.value ?? undefined,
+      amountOwed: this.amountOwed.value ?? undefined,
+    };
+
+    this.accountService.postAccount(account).subscribe((x) => console.log('result - ', x));
   }
 }
