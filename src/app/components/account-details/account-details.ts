@@ -5,10 +5,11 @@ import { MatSelectModule } from '@angular/material/select';
 import { Account } from '../../api/generated';
 import { AccountService } from '../../services/account-service';
 import { DecimalPipe, JsonPipe } from '@angular/common';
+import { MatButton } from '@angular/material/button';
 
 @Component({
   selector: 'app-account-details',
-  imports: [MatFormFieldModule, MatInputModule, MatSelectModule, JsonPipe, DecimalPipe],
+  imports: [MatFormFieldModule, MatInputModule, MatSelectModule, JsonPipe, DecimalPipe, MatButton],
   templateUrl: './account-details.html',
   styleUrl: './account-details.scss',
 })

@@ -1,1 +1,14 @@
-<p>login works!</p>
+<div class="account-details">
+  <div class="form-container">
+    <h3>Login Details:</h3>
+    <mat-form-field>
+      <mat-label aria-placeholder="admin@admin.com">Email</mat-label>
+      <input [formControl]="email" matInput />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Password</mat-label>
+      <input [formControl]="password" matInput type="password" />
+    </mat-form-field>
+    <button matButton="filled" (click)="login()">Login</button>
+  </div>
+</div>

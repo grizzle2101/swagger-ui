@@ -244,9 +244,11 @@
       <p>Congratulations! Your app is running. 🎉</p>
       <br />
       <div>
-        <button matButton="filled">Home</button>
-        <button matButton="filled">Account Details</button>
-        <button matButton="filled">Login/Logout</button>
+        <button matButton="filled" routerLink="/">Home</button>
+        <button matButton="filled" routerLink="/account">Account Details</button>
+        <button matButton="filled" (click)="LoginOrLogout()">
+          {{ tokenService.hasToken() ? 'Logout' : 'Login' }}
+        </button>
 
         <router-outlet />
       </div>
