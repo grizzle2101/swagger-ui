@@ -41,7 +41,6 @@ export class AccountDetails {
   }
 
   submit() {
-    console.log(this.accountHolder.value);
-    this.accountService.postAccount(12, {}).subscribe((x) => console.log(x));
+    this.accountService.postAccount().subscribe((x) => console.log('result - ', x));
   }
 }
