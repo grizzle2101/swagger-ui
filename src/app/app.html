@@ -240,18 +240,15 @@
           <clipPath id="a"><path fill="#fff" d="M0 0h982v239H0z" /></clipPath>
         </defs>
       </svg>
-      <h1>Hello, {{ title() }}</h1>
+      <h1>Swagger Demo</h1>
       <p>Congratulations! Your app is running. 🎉</p>
       <br />
       <div>
-        <button matButton="filled" (click)="fetchData()">Query Data:</button>
-        <br />
-        Account Data:
-        {{ acccountData() | json }}
-        <br />
-        <br />
-        Sum Lodgements: ${{ acccountData().lodgementOne + acccountData().lodgementTwo | number }}
-        <br />
+        <button matButton="filled">Home</button>
+        <button matButton="filled">Account Details</button>
+        <button matButton="filled">Login/Logout</button>
+
+        <router-outlet />
       </div>
     </div>
     <div class="divider" role="separator" aria-label="Divider"></div>
@@ -265,5 +262,3 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * End of Placeholder  * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-
-<router-outlet />

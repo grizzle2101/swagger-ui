@@ -23,8 +23,10 @@ app.get("/api-json", (req, res) => {
 });
 
 Step 3 - Generate:
+NODE
 npx openapi-generator-cli generate -i http://localhost:3000/api-json -g typescript-angular -o src/app/api/generated
-
+JAVA
+npx openapi-generator-cli generate -i http://localhost:8080/v3/api-docs -g typescript-angular -o src/app/api/generated
 
 Note:
 Java is required under the hood to use the swagger gen tool.
@@ -37,3 +39,5 @@ Lets Manufacture a breaking change & Demonstrate how this works.
 1 - build a simple feature displaying the data 
 2 - change the data (break it on the backend)
 3 - regenerate swagger with new field
+
+Confirm again on Java backend test...
